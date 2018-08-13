@@ -1,0 +1,20 @@
+{
+  "compileOnSave": true,
+    "compilerOptions": {
+      "target": "es5",
+      "sourceMap": true,
+      "allowSyntheticDefaultImports": true,
+      "jsx": "react-native",
+      "allowJs": true,
+      "module": "es6",
+      "baseUrl": ".",
+      "traceResolution": true,
+      "moduleResolution": "node",
+      "paths": {
+        "*": [
+          "*.web",
+          "*"
+        ]
+      }
+    }
+}

@@ -1,0 +1,10 @@
+{
+  "expo": {
+    "sdkVersion": "28.0.0",
+    "entryPoint": "index.js",
+    "packagerOpts": {
+      "sourceExts": ["ts", "tsx", "js", "jsx"],
+      "transformer": "node_modules/react-native-typescript-transformer/index.js"
+    }
+  }
+}

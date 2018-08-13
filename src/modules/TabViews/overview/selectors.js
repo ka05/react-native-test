@@ -1,0 +1,1 @@
+export const getOverviewContentList = (state) => state.overviewReducer.list
