@@ -1,4 +1,3 @@
-console.log("made it to router")
 import { Platform } from 'react-native';
 import RouterPackage from 'react-router-native'
 const OtherPkg = require('react-router-native')

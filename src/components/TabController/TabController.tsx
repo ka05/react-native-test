@@ -1,10 +1,11 @@
 import React from 'react'
 import reactDom from 'react-dom'
+import { connect, compose } from 'react-redux';
 import { StyleSheet, Text, View } from 'react-native';
 
 import {TabLocation} from './TabControllerConstants'
 
-import TabItem from './TabItem/TabItem'
+import TabItemView from './TabItemView/TabItemView'
 
 interface TabItem{
   url:string;
@@ -23,25 +24,24 @@ interface State {
 
 }
 
+
 class TabController extends React.Component<Props, State> {
   componentDidMount() {}
   render() {
     const options = handleDefaultOptions(this.props.options)
-    console.log(options);
-
-    const tabs = this.props.tabs
+    const { tabs } = this.props
     const { Router, Route } = this.props.router
-
+    
     const tabbar = (
       <View style={styles.navigationbar}>
         {
           tabs.map(tab => {
             return (
-              <TabItem 
+              <TabItemView 
                 key={tab.label}
                 router={this.props.router}
                 {...tab}>
-              </TabItem>
+              </TabItemView>
             )
           })
         }
@@ -84,7 +84,6 @@ const styles = StyleSheet.create({
     backgroundColor:'#1E1E1E',
     alignItems: 'center',
     justifyContent: 'center',
-    paddingTop:50,
     paddingBottom:50,
   },
   navigationbar: {
@@ -106,4 +105,4 @@ function handleDefaultOptions(options){
   return options
 }
 
-export default TabController
+export default connect(state => ({}), {})(TabController)

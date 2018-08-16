@@ -60,4 +60,12 @@ export default {
 	},
 	visitorsContent: {},
 	eventsContent: {},
+	navigation:{
+		title:'Test title',
+		leftTBOptions:[],
+		rightTBOptions:[],
+	},
+	tabController:{
+		activeTabUrl:'/'
+	}
 };

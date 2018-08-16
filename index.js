@@ -31,6 +31,5 @@ import { View } from 'react-native';
 if (process.env.NODE_ENV === 'development') {
   Expo.KeepAwake.activate();
 }
-console.log("something")
 Expo.registerRootComponent(App);
 
